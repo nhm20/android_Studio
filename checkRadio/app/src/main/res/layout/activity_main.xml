@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/img_1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your pizza"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Pizza Type Selection -->
+    <RadioGroup
+        android:id="@+id/pizzaTypeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/pepperoniRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pepperoni"
+            android:padding="12dp" />
+
+        <RadioButton
+            android:id="@+id/margheritaRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Margherita"
+            android:padding="12dp" />
+
+        <RadioButton
+            android:id="@+id/fourSeasonRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Four Season"
+            android:padding="12dp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="16dp"
+        android:text="Select Size"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Pizza Size Selection -->
+    <RadioGroup
+        android:id="@+id/sizeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/regularRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Regular"
+            android:padding="12dp" />
+
+        <RadioButton
+            android:id="@+id/mediumRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:padding="12dp" />
+
+        <RadioButton
+            android:id="@+id/largeRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:padding="12dp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="16dp"
+        android:text="Select Toppings"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Toppings Selection -->
+    <CheckBox
+        android:id="@+id/onionsCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Onions"
+        android:padding="12dp" />
+
+    <CheckBox
+        android:id="@+id/blackOlivesCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Black Olives"
+        android:padding="12dp" />
+
+    <CheckBox
+        android:id="@+id/extraCheeseCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Extra Cheese"
+        android:padding="12dp" />
+
+    <CheckBox
+        android:id="@+id/sausageCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sausage"
+        android:padding="12dp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Order"
+        android:layout_marginTop="20dp" />
+</LinearLayout>
