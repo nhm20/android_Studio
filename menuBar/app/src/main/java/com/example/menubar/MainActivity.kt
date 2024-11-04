@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        var tb1:androidx.appcompat.widget.Toolbar=findViewById(R.id.toolbar)
+        var tb1=findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(tb1)
     }
 
@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.main_menu,menu);
         return true
     }
-
     //handle action bar item clicks here
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){

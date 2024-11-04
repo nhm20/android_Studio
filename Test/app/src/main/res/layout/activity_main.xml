@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login"
+    >
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="392dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+
+        android:hint="User Id"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:inputType="text">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="#AB482B"
+        android:text="Sign In ->"
+        android:textColor="@color/black"
+        android:textSize="15dp">
+
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot PassWord"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        ></TextView>
+
+</LinearLayout>

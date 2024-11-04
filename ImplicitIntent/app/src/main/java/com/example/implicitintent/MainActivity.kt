@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(i2)
         }
         btn3.setOnClickListener{
-            val i3:Intent=Intent(Intent.ACTION_VIEW)
+            val i3=Intent(Intent.ACTION_VIEW)
             i3.setType(CallLog.Calls.CONTENT_TYPE)
             startActivity(i3)
         }

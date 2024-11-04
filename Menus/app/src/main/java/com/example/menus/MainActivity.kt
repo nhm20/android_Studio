@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
         val destinationSpinner: Spinner =findViewById(R.id.spinner)
         val packageListView:ListView=findViewById(R.id.list1)
         val destinations= arrayOf("Paris","New York","Tokyo")
@@ -40,13 +41,10 @@ class MainActivity : AppCompatActivity() {
                     1->newYorkDes
                     else ->TokyoDes
                 }
-
                 val listAdapter=ArrayAdapter(this@MainActivity,android.R.layout.simple_list_item_1,selectedPackages)
                 packageListView.adapter=listAdapter
             }
-
             override fun onNothingSelected(parent: AdapterView<*>) {
-
             }
         }
     }

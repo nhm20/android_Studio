@@ -20,8 +20,6 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG,"Debug log: highest priority,This is used to debug the app")
             Log.i(TAG,"Info log: moderate priority importance, they give info of ")
             Log.w(TAG,"Warning log: This is a warnging message for unexpected behaviour")
-
         }
-
     }
 }

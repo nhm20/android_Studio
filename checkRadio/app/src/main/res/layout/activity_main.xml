@@ -4,27 +4,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/img_1">
+    android:background="@drawable/img">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select your pizza"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+
+        />
 
     <!-- Pizza Type Selection -->
     <RadioGroup
         android:id="@+id/pizzaTypeRadioGroup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
+<!--        layout_gravity- places the Button in layout, gravity- places the text in button-->
         <RadioButton
             android:id="@+id/pepperoniRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pepperoni"
+            android:textSize="16dp"
             android:padding="12dp" />
 
         <RadioButton
@@ -32,14 +38,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Margherita"
-            android:padding="12dp" />
+            android:padding="12dp"
+            android:textSize="16dp"/>
 
         <RadioButton
             android:id="@+id/fourSeasonRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Four Season"
-            android:padding="12dp" />
+            android:padding="12dp"
+            android:textSize="16dp"/>
     </RadioGroup>
 
     <TextView
@@ -48,7 +56,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="16dp"
         android:text="Select Size"
-        android:textSize="20sp"
+        android:gravity="center"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <!-- Pizza Size Selection -->
@@ -62,21 +71,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Regular"
-            android:padding="12dp" />
+            android:padding="12dp"
+            android:textSize="16dp"/>
 
         <RadioButton
             android:id="@+id/mediumRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Medium"
-            android:padding="12dp" />
+            android:padding="12dp"
+            android:textSize="16dp"/>
 
         <RadioButton
             android:id="@+id/largeRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Large"
-            android:padding="12dp" />
+            android:padding="12dp"
+            android:textSize="16dp"/>
     </RadioGroup>
 
     <TextView
@@ -85,8 +97,9 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="16dp"
         android:text="Select Toppings"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
 
     <!-- Toppings Selection -->
     <CheckBox
@@ -94,28 +107,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Onions"
-        android:padding="12dp" />
+        android:padding="12dp"
+        android:textSize="16dp"/>
 
     <CheckBox
         android:id="@+id/blackOlivesCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Black Olives"
-        android:padding="12dp" />
+        android:padding="12dp"
+        android:textSize="16dp"/>
 
     <CheckBox
         android:id="@+id/extraCheeseCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Extra Cheese"
-        android:padding="12dp" />
+        android:padding="12dp"
+        android:textSize="16dp"/>
 
     <CheckBox
         android:id="@+id/sausageCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sausage"
-        android:padding="12dp" />
+        android:padding="12dp"
+        android:textSize="16dp"/>
 
     <!-- Submit Button -->
     <Button
