@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">My App</string>
-    <string name="come_to_home">家に来て</string>
+    <string name="home_text">ఇంటికి వస్తారు</string>
 </resources>

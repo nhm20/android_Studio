@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Logcat</string>
+    <string name="greeting">¡Hola, Mundo!</string>
+    <string name="description">¡Bienvenido a mi aplicación!</string>
+</resources>
