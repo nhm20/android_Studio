@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Toolbar Style -->
+    <style name="CustomToolbarStyle">
+        <item name="android:background">#ad4c12</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:theme">?attr/actionBarTheme</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="ButtonStyle">
+        <item name="android:layout_width">404dp</item>
+        <item name="android:layout_height">87dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- ImageButton Style -->
+    <style name="ImageButtonStyle">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!-- TextView Style -->
+    <style name="TextViewStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">16dp</item>
+    </style>
+
+</resources>

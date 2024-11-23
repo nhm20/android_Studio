@@ -1,5 +1,6 @@
 package com.example.popup
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -10,27 +11,38 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class Ratepage: AppCompatActivity()  {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.rate_page)
-        var btn=findViewById<RatingBar>(R.id.ratingBar)
-        btn.setOnClickListener{
-            var b= AlertDialog.Builder(this)
-//            b.setIcon(@)
-            b.setTitle("Exit")
-            b.setMessage("Do you really want to exit?")
-            b.setCancelable(false)
-            b.setPositiveButton("Yes"){dialog,_->finish()}
-            b.setNegativeButton("No"){dialog,_->dialog.dismiss()}
-            b.setNeutralButton("May be"){dialog,_-> Toast.makeText(this,"May be clicked", Toast.LENGTH_LONG).show()}
-            b.create()
-            b.show()
-        }
-        rate.setOnClickListener{
-            var i= Intent(this,Ratepage::class.java)
-            startActivity(i)
+        val btn = findViewById<Button>(R.id.btn)
+//        val rate = findViewById<Button>(R.id.rate)
+        val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
 
+        // Show the popup dialog
+        btn.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Exit")
+            builder.setMessage("Do you really want to exit?")
+            builder.setCancelable(false)
+            builder.setPositiveButton("Yes") { _, _ -> finish() }
+            builder.setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
+            builder.setNeutralButton("Maybe") { _, _ ->
+                Toast.makeText(this, "You clicked Maybe", Toast.LENGTH_SHORT).show()
+            }
+            builder.create().show()
+        }
+
+        // Navigate to Ratepage
+        rate.setOnClickListener {
+            val intent = Intent(this, Ratepage::class.java)
+            startActivity(intent)
+        }
+
+        // Handle RatingBar changes
+        ratingBar.setOnRatingBarChangeListener { _, rating, _ ->
+            Toast.makeText(this, "You rated: $rating stars", Toast.LENGTH_SHORT).show()
         }
     }
 }

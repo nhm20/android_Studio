@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ad4c12"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109"
+        tools:ignore="MissingConstraints" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="861dp"
+        android:columnCount="1"
+        android:layout_marginTop="160dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+
+        android:rowCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <!-- First Item -->
+        <LinearLayout
+            android:id="@+id/lybtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="1"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="Breakfast Image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Breakfast"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- Second Item -->
+        <LinearLayout
+            android:id="@+id/lybtn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="1"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="1"
+            android:gravity="center"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgbtn2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="Lunch Image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_1" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Lunch"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- Third Item -->
+        <LinearLayout
+            android:id="@+id/lybtn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="1"
+            android:gravity="center"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgbtn3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="Snacks Image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_2" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Snacks"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- Fourth Item -->
+        <LinearLayout
+            android:id="@+id/lybtn4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="1"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="1"
+            android:gravity="center"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgbtn4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="Dinner Image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_3" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Dinner"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </GridLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

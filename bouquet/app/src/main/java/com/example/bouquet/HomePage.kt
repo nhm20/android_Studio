@@ -15,15 +15,10 @@ class HomePage : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         var btn = findViewById<Button>(R.id.sbm)
-        var name = findViewById<EditText>(R.id.name)
-        var pass = findViewById<EditText>(R.id.pass)
-        btn.setOnClickListener {
-            var a = name.text.toString()
-            var b = pass.text.toString()
-            val i = Intent(this, HomePage::class.java)
-            i.putExtra("name", a)
-            i.putExtra("pass", b)
-            startActivity(i)
-        }
+        val name = intent.getStringExtra("name")
+        val pass = intent.getStringExtra("pass")
+
+        // Now you can use the values `name` and `pass`
+        println("Name: $name, Password: $pass")
     }
 }

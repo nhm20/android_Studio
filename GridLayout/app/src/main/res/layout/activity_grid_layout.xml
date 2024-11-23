@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +10,6 @@
     android:paddingRight="2dp"
     android:paddingBottom="2dp"
     android:rowCount="3">
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -24,7 +22,6 @@
         android:paddingBottom="2dp"
         android:scaleType="fitXY"
         tools:srcCompat="@tools:sample/avatars" />
-
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="wrap_content"
@@ -70,7 +67,6 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         tools:srcCompat="@tools:sample/avatars" />
-
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="wrap_content"
@@ -81,7 +77,6 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         tools:srcCompat="@tools:sample/avatars" />
-
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"

@@ -9,42 +9,41 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class MainActivity :AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val destinationSpinner: Spinner =findViewById(R.id.spinner)
-        val packageListView:ListView=findViewById(R.id.list1)
-        val destinations= arrayOf("Paris","New York","Tokyo")
-        val parisDes= arrayOf("Effiel Tower","Louvre Museum")
-        val newYorkDes= arrayOf("Statue of Liberty","Central Park")
-        val TokyoDes= arrayOf("Mount Fuji","Tokyo Tower","Senso-ji Temple")
+        val packageListView: ListView = findViewById(R.id.list1)
+        val parisDes = arrayOf("GO to market", "Do Work")
 
-        val spinnerAdapter=ArrayAdapter(this,android.R.layout.simple_spinner_item,destinations)
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        destinationSpinner.adapter=spinnerAdapter
+        val initialAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, parisDes)
+        packageListView.adapter = initialAdapter
 
-        val initialAdapter=ArrayAdapter(this,android.R.layout.simple_list_item_1,parisDes)
-        packageListView.adapter=initialAdapter
-
-        destinationSpinner.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int,id:Long) {
-                val selectedPackages=when(position){
-                    0 ->parisDes
-                    1->newYorkDes
-                    else ->TokyoDes
+        packageListView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            when (position) {
+                0 -> {
+                    val b = AlertDialog.Builder(this@MainActivity)
+                    b.setTitle("Delete")
+                    b.setMessage("Do you really want to Delete?")
+                    b.setCancelable(false)
+                    b.setPositiveButton("Yes") { dialog, _ ->
+                        view?.visibility = View.GONE
+                    }
+                    b.setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
+                    b.create()
+                    b.show()
                 }
-                val listAdapter=ArrayAdapter(this@MainActivity,android.R.layout.simple_list_item_1,selectedPackages)
-                packageListView.adapter=listAdapter
-            }
-            override fun onNothingSelected(parent: AdapterView<*>) {
+                else -> {
+                    false
+                }
             }
         }
     }

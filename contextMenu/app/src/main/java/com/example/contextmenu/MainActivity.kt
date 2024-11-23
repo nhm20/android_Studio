@@ -24,11 +24,7 @@ class MainActivity : AppCompatActivity() {
         registerForContextMenu(j1)
     }
 
-    override fun onCreateContextMenu(
-        menu: ContextMenu?,
-        v: View?,
-        menuInfo: ContextMenu.ContextMenuInfo?
-    ) {
+    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         super.onCreateContextMenu(menu, v, menuInfo)
         val j2:MenuInflater=menuInflater
         j2.inflate(R.menu.context_menu,menu)
