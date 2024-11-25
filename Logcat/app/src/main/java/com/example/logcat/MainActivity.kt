@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val textViewGreeting: TextView = findViewById(R.id.textViewGreeting)
         val textViewDescription: TextView = findViewById(R.id.textViewDescription)
         var langbtn=findViewById<Button>(R.id.btn2)
-        // Set the greeting and description text from localized strings
+        val langentn=findViewById<Button>(R.id.btn)
         textViewGreeting.text = getString(R.string.greeting)
         textViewDescription.text = getString(R.string.description)
 
@@ -36,21 +36,24 @@ class MainActivity : AppCompatActivity() {
             Log.i(TAG,"Info log: moderate priority importance, they give info of ")
             Log.w(TAG,"Warning log: This is a warning message for unexpected behaviour")
         }
-
         langbtn.setOnClickListener {
             setLocale("es")  // Switch to Spanish
+        }
+        langentn.setOnClickListener{
+            setLocale("en")
         }
     }
 
     fun setLocale(languageCode: String) {
-        val locale = Locale(languageCode)
-        Locale.setDefault(locale)
-
-        val config = Configuration()
-        config.locale = locale
-        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
-
-        // Restart the activity to reflect changes
-        recreate()
+        val current = resources.configuration.locales.get(0).language
+        if (current != languageCode) {
+            val locale = Locale(languageCode)
+            Locale.setDefault(locale)
+            val config = Configuration(resources.configuration)
+            config.setLocale(locale)
+            resources.updateConfiguration(config, resources.displayMetrics)
+            recreate()
+        }
     }
+
 }
