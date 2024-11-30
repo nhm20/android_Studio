@@ -38,8 +38,6 @@ class MainActivity : AppCompatActivity() {
             b.show()
         }
 
-
-
 //        val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
 
 
